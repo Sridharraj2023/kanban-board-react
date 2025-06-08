@@ -1,0 +1,115 @@
+/* Task Card */
+.task-card {
+  background-color: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Safe hover effect with optional override */
+.task-card:hover:not(.disable-hover) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  background-color: #faf9f8;
+}
+
+/* Disable hover, drag, and pointer events when modal is open */
+.task-card.disable-hover {
+  pointer-events: none;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06) !important;
+  background-color: #ffffff !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 49, 48, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal */
+.modal {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 440px;
+  max-width: 92%;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #323130;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  margin-bottom: 0.75rem;
+  color: #605e5c;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Modal Buttons Container */
+.modal-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Primary Button */
+.modal-button-primary {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button-primary:hover,
+.modal-button-primary:focus {
+  background-color: #005ea6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.5);
+}
+
+/* Secondary Button */
+.modal-button-secondary {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #edebe9;
+  color: #323130;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button-secondary:hover,
+.modal-button-secondary:focus {
+  background-color: #e1dfdd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(142, 140, 138, 0.5);
+}

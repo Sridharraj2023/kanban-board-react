@@ -1,0 +1,40 @@
+.column {
+  background-color: #ffffff; /* Fluent white card style */
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: 280px;
+  min-height: 520px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1dfdd; /* Softer Fluent UI neutral border */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.column:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  background-color: #faf9f8; /* Fluent hover background */
+}
+
+.column h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.375rem;
+  color: #201f1e; /* Fluent UI dark neutral */
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid #0078d4; /* Fluent primary color */
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+}
+
+/* Optional: subtle inner spacing between tasks/cards */
+.column .task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+

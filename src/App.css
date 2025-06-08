@@ -1,0 +1,26 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f2f1;
+  color: #323130;
+}
+
+
+
+.kanban-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .kanban-section {
+    padding: 1rem;
+  }
+
+  .kanban-section h1 {
+    font-size: 1.5rem;
+  }
+}

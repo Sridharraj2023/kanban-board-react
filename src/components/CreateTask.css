@@ -1,0 +1,99 @@
+.create-task-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 440px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #e1dfdd;
+  transition: box-shadow 0.3s ease;
+}
+
+.create-task-form:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.create-task-form h2 {
+  margin-bottom: 0.5rem;
+  color: #0078d4;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.create-task-form input,
+.create-task-form textarea,
+.create-task-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #c8c6c4;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  background-color: #faf9f8;
+}
+
+.create-task-form input:focus,
+.create-task-form textarea:focus,
+.create-task-form select:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.3);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.create-task-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Placeholder Styling */
+.create-task-form input::placeholder,
+.create-task-form textarea::placeholder {
+  color: #8a8886;
+  opacity: 1;
+}
+
+/* Button Styling */
+.create-task-form button {
+  background-color: #0078d4;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.create-task-form button:hover {
+  background-color: #005a9e;
+  transform: translateY(-1px);
+}
+
+/* Date Input Wrapper for calendar icon */
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-input-wrapper input {
+  padding-right: 44px;
+}
+
+.date-input-wrapper .calendar-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #605e5c;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
