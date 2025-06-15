@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# 🏗️ Kanban Board React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **A powerful, interactive Kanban board built with React and TypeScript — featuring drag-and-drop task management, modal task details, task creation, deletion, and advanced compound filtering.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Overview
 
-## Expanding the ESLint configuration
+This project implements a **Kanban board frontend** designed for efficient task management.  
+It uses **React (TypeScript)** with **Vite** for fast builds, **NPM** as the package manager, and **Fluent UI** for design consistency.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+You can **drag tasks between columns**, view detailed task information in modals, create new tasks via a form, delete tasks, and filter tasks dynamically using advanced **compound logic** (AND, OR, NOT) on **assignees** and **tags**.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Technology       | Purpose                      |
+| ---------------- | ----------------------------|
+| React + TypeScript | Frontend framework & typing |
+| Vite             | Build tool                  |
+| NPM             | Package manager             |
+| Fluent UI        | UI component design system  |
+| Custom CSS       | Styling                    |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🎯 Features
+
+### 1️⃣ Kanban Board  
+- Columns: **To Do**, **In Progress**, **Review**, **Done**  
+- Drag and drop cards between columns  
+- Tasks rendered from dummy data  
+
+### 2️⃣ Card Preview  
+- Shows **Title**, **Due Date**, **Assignee**, and **Tag** on cards  
+
+### 3️⃣ Card Detail Modal  
+- Displays detailed info:  
+  - Title  
+  - Description (plain text)  
+  - Tag  
+  - Created At  
+  - Created By  
+  - Assignee  
+  - Estimation  
+- Delete functionality available  
+- No edit functionality  
+
+### 4️⃣ Create Card  
+- Form to create new tasks  
+- Supports all above fields  
+- No modal editing, creation only  
+
+### 5️⃣ Advanced Filtering  
+- Filter tasks by **Assignee** and **Tag**  
+- Support for **AND**, **OR**, **NOT** compound logic  
+- Examples supported:  
+  - Assignee is A, B **AND** Tag is design  
+  - Assignee is B **OR** Tag is backend  
+  - Assignee is **NOT** A **AND** Tag is frontend, backend  
+- Filters dynamically affect visible cards  
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repo**  
+```bash
+git clone https://github.com/yourusername/kanban-board-react.git
+cd kanban-board-react
