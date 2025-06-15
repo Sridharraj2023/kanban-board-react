@@ -1,5 +1,5 @@
 .column {
-  background-color: #ffffff; /* Fluent white card style */
+  background-color: #ffffff; 
   border-radius: 10px;
   padding: 1.25rem;
   width: 280px;
@@ -12,11 +12,7 @@
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.column:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-  background-color: #faf9f8; /* Fluent hover background */
-}
+
 
 .column h2 {
   margin: 0 0 1rem 0;
